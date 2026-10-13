@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — AH Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Anton", "Impact", "sans-serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+              hero: ["Poppins", "Inter", "sans-serif"],
+            },
+            colors: { brand: "#1a8cff", ink: "#161616" },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+            animation: { marquee: "marquee 25s linear infinite" },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Image placeholders: replace the gradient with a background-image / <img> */
+      .tile {
+        border-radius: 1.75rem;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      }
+      .hero-bg {
+        background:
+          radial-gradient(60% 40% at 20% 20%, #cfe3fb 0%, transparent 70%),
+          radial-gradient(50% 35% at 80% 60%, #c9defa 0%, transparent 70%),
+          radial-gradient(60% 40% at 30% 85%, #d3e5fc 0%, transparent 70%),
+          linear-gradient(#f4f8fe, #fff);
+      }
+      /* coiled phone cord */
+      .cord {
+        height: 44px;
+        background-image: repeating-linear-gradient(
+          100deg,
+          #161616 0 7px,
+          #fff 7px 9px,
+          #161616 9px 11px,
+          transparent 11px 14px
+        );
+        -webkit-mask-image: radial-gradient(
+          ellipse 9px 22px at 50% 50%,
+          #000 98%,
+          transparent
+        );
+        mask-image: radial-gradient(
+          ellipse 9px 22px at 50% 50%,
+          #000 98%,
+          transparent
+        );
+        -webkit-mask-size: 14px 44px;
+        mask-size: 14px 44px;
+        -webkit-mask-repeat: repeat-x;
+        mask-repeat: repeat-x;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .animate-marquee {
+          animation: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="animations.css" />
+  </head>
+  <body class="bg-white font-sans text-ink antialiased">
+    <div class="relative">
+      <video
+        class="absolute inset-0 z-0 h-full w-full object-cover opacity-30"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="Assets/hero-poster.jpg"
+        aria-hidden="true"
+      >
+        <source src="Assets/video.mp4" type="video/mp4" />
+      </video>
+
+      <nav
+        class="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-6 md:px-10"
+      >
+        <a
+          href="index.html"
+          aria-label="AH Studio home"
+          class="font-display text-4xl leading-none"
+        >
+          <img src="Assets/Logo.png" alt="" class="w-[48px] h-auto" />
+        </a>
+        <button
+          id="menuBtn"
+          class="font-display text-2xl uppercase tracking-tight"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          Menu
+        </button>
+      </nav>
+
+      <div
+        id="menu"
+        class="fixed inset-0 z-40 hidden flex-col items-center justify-center gap-6 bg-ink text-white"
+      >
+        <button
+          id="menuClose"
+          class="absolute right-6 top-6 font-display text-2xl uppercase md:right-10"
+        >
+          Close
+        </button>
+        <a
+          href="work.html"
+          class="font-display text-8xl uppercase hover:text-brand"
+          >Work</a
+        >
+        <a
+          href="about.html"
+          class="font-display text-8xl uppercase hover:text-brand"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          class="font-display text-8xl uppercase text-brand"
+          >Contact</a
+        >
+      </div>
+
+      <!-- HERO -->
+      <header
+        class="relative flex min-h-[760px] items-center justify-center overflow-hidden px-6 py-32"
+      >
+        <!-- bottom-left floating cards -->
+        <div
+          class="pointer-events-none absolute bottom-24 left-0 hidden h-72 w-96 md:block lg:left-10"
+          aria-hidden="true"
+        >
+          <div
+            class="tile float-card absolute left-0 top-6 h-44 w-36 -rotate-[22deg] bg-gradient-to-br from-pink-400 to-red-700"
+          >
+            <img
+              src="./Assets/bottom_header_1.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-16 top-10 h-44 w-36 -rotate-12 bg-gradient-to-br from-orange-500 to-orange-800"
+          >
+            <img
+              src="./Assets/bottom_header_2.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-32 top-14 h-44 w-36 -rotate-3 bg-gradient-to-br from-slate-300 to-slate-900"
+          >
+            <img
+              src="./Assets/bottom_header_3.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-48 top-12 h-44 w-36 rotate-6 bg-gradient-to-br from-green-600 to-red-500"
+          >
+            <img
+              src="./Assets/bottom_header_4.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-3xl text-center bottom-32">
+          <h1
+            class="font-display text-6xl uppercase leading-none sm:text-7xl md:text-9xl"
+          >
+            CONTACT US
+          </h1>
+          <p
+            class="mx-auto mt-10 max-w-2xl font-hero text-base text-neutral-700 md:text-lg"
+          >
+            Don't worry if everything isn't figured out yet. Just tell me what
+            you're working on, what's not working, or what you're trying to
+            achieve. We'll take it from there.
+          </p>
+        </div>
+      </header>
+    </div>
+
+    <!-- BANNER IMAGE -->
+    <section class="mx-auto max-w-[1440px] px-6 pt-16 md:px-10">
+      <div
+        class="h-[360px] w-full md:h-[560px]"
+        role="img"
+        aria-label="Hands coming together"
+      >
+        <img
+          src="./Assets/contact_banner.jpg"
+          alt=""
+          class="h-full w-full object-cover rounded-[2rem]"
+        />
+      </div>
+    </section>
+
+    <!-- FORM + PHONE -->
+    <section class="relative overflow-hidden pt-24 md:pt-36">
+      <div class="mx-auto max-w-[1440px] px-6 md:px-10">
+        <h2 class="font-display text-5xl uppercase leading-none md:text-6xl">
+          Ready for collaboration?
+        </h2>
+
+        <div
+          class="relative mt-14 grid gap-10 md:grid-cols-[minmax(0,640px)_1fr]"
+        >
+          <form id="contactForm" class="relative z-10 font-hero" novalidate>
+            <label class="sr-only" for="name">Full name</label>
+            <input
+              id="name"
+              type="text"
+              required
+              placeholder="Full Name"
+              class="w-full rounded-xl bg-neutral-100 px-5 py-5 text-base outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-brand"
+            />
+
+            <div class="mt-6 grid gap-6 sm:grid-cols-2">
+              <div>
+                <label class="sr-only" for="email">Email address</label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="Email address"
+                  class="w-full rounded-xl bg-neutral-100 px-5 py-5 text-base outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-brand"
+                />
+              </div>
+              <div class="relative">
+                <label class="sr-only" for="type">Project type</label>
+                <select
+                  id="type"
+                  class="w-full appearance-none rounded-xl bg-neutral-100 px-5 py-5 text-base text-neutral-400 outline-none focus:ring-2 focus:ring-brand"
+                >
+                  <option value="" selected disabled>Project type</option>
+                  <option>Website</option>
+                  <option>Mobile app</option>
+                  <option>SaaS product</option>
+                  <option>UX/UI redesign</option>
+                  <option>Not sure yet</option>
+                </select>
+                <svg
+                  class="pointer-events-none absolute right-5 top-1/2 h-3 w-3 -translate-y-1/2 text-neutral-500"
+                  viewBox="0 0 12 8"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M0 0h12L6 8z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-6 sm:grid-cols-2">
+              <div>
+                <label class="sr-only" for="budget">Budget range</label>
+                <input
+                  id="budget"
+                  type="text"
+                  placeholder="Budget range"
+                  class="w-full rounded-xl bg-neutral-100 px-5 py-5 text-base outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-brand"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="deadline">Deadline</label>
+                <input
+                  id="deadline"
+                  type="text"
+                  placeholder="Deadline"
+                  class="w-full rounded-xl bg-neutral-100 px-5 py-5 text-base outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-brand"
+                />
+              </div>
+            </div>
+
+            <label class="sr-only" for="message">Message</label>
+            <textarea
+              id="message"
+              required
+              rows="4"
+              placeholder="Message"
+              class="mt-6 w-full resize-none rounded-xl bg-neutral-100 px-5 py-5 text-base outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-brand"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="mt-8 w-full rounded-full bg-ink py-6 font-display text-lg uppercase tracking-wide text-white transition hover:bg-brand"
+            >
+              Submit
+            </button>
+            <p
+              id="formNote"
+              class="mt-4 hidden text-center text-sm font-medium text-emerald-600"
+              role="status"
+            >
+              Thanks! We'll be in touch shortly.
+            </p>
+          </form>
+
+          <!-- Telephone handset image -->
+          <div
+            class="pointer-events-none relative hidden md:block"
+            aria-hidden="true"
+          >
+            <img
+              src="./Assets/phone_img.png"
+              alt=""
+              class="w-full max-w-none select-none object-contain md:-mt-20"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section class="mx-auto max-w-[1440px] px-6 py-12 md:px-10 md:pt-16">
+      <div class="grid gap-10 md:grid-cols-2 md:pl-16">
+        <div>
+          <p class="font-hero text-neutral-400">Email address</p>
+          <div class="mt-2 flex items-center gap-5">
+            <span
+              id="emailText"
+              class="font-display text-4xl uppercase leading-none md:text-5xl"
+              >hello@ahstudio.com</span
+            >
+            <button
+              data-copy="emailText"
+              class="copy-btn text-neutral-400 transition hover:text-ink"
+              aria-label="Copy email address"
+            >
+              <svg
+                class="h-7 w-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              >
+                <rect x="8" y="8" width="13" height="13" rx="3" />
+                <path
+                  d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <p class="font-hero text-neutral-400">Contact number</p>
+          <div class="mt-2 flex items-center gap-5">
+            <span
+              id="phoneText"
+              class="font-display text-4xl leading-none md:text-5xl"
+              >+92328 (9502506)</span
+            >
+            <button
+              data-copy="phoneText"
+              class="copy-btn text-neutral-400 transition hover:text-ink"
+              aria-label="Copy contact number"
+            >
+              <svg
+                class="h-7 w-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              >
+                <rect x="8" y="8" width="13" height="13" rx="3" />
+                <path
+                  d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="overflow-hidden bg-white pt-4">
+      <div
+        class="px-4 text-center font-display text-[24vw] uppercase leading-[1.05] text-brand md:text-[19.5vw]"
+        style="white-space: nowrap"
+      >
+        AH Studio
+      </div>
+
+      <div
+        class="relative mx-auto flex h-64 max-w-[1440px] items-center justify-center px-6"
+      >
+        <div
+          class="pointer-events-none absolute left-0 hidden h-60 w-[480px] md:block"
+          aria-hidden="true"
+        >
+          <div
+            class="tile absolute left-4 top-16 h-44 w-36 -rotate-[14deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer1.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-20 top-12 h-44 w-36 -rotate-[10deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer2.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-36 top-4 h-44 w-36 -rotate-6 overflow-hidden"
+          >
+            <img
+              src="Assets/footer3.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-60 top-0 h-44 w-36 rotate-3 overflow-hidden"
+          >
+            <img
+              src="Assets/footer4.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+
+        <a
+          href="contact.html"
+          class="relative z-10 rounded-full bg-ink px-10 py-4 font-display text-lg tracking-wide text-white transition hover:bg-brand"
+        >
+          Lets Talk
+        </a>
+
+        <div
+          class="pointer-events-none absolute right-0 hidden h-60 w-[480px] md:block"
+          aria-hidden="true"
+        >
+          <div class="tile absolute left-4 top-0 h-44 w-36 overflow-hidden">
+            <img
+              src="Assets/footer5.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-20 top-4 h-44 w-36 rotate-12 overflow-hidden"
+          >
+            <img
+              src="Assets/footer6.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-36 top-12 h-44 w-36 rotate-[22deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer7.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-60 top-16 h-44 w-36 rotate-[22deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer8.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden py-4" aria-label="Social links">
+        <div
+          class="flex w-max animate-marquee items-center gap-6 whitespace-nowrap font-display text-lg uppercase"
+        >
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Menu overlay
+      const menu = document.getElementById("menu");
+      const btn = document.getElementById("menuBtn");
+      const setMenu = (open) => {
+        menu.classList.toggle("hidden", !open);
+        menu.classList.toggle("flex", open);
+        btn.setAttribute("aria-expanded", open);
+      };
+      btn.addEventListener("click", () => setMenu(true));
+      document
+        .getElementById("menuClose")
+        .addEventListener("click", () => setMenu(false));
+      document.addEventListener(
+        "keydown",
+        (e) => e.key === "Escape" && setMenu(false),
+      );
+
+      // Project type select: dark text once a value is chosen
+      const type = document.getElementById("type");
+      type.addEventListener("change", () => {
+        type.classList.remove("text-neutral-400");
+        type.classList.add("text-ink");
+      });
+
+      // Form: validate, then show a confirmation (wire up your backend here)
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        document.getElementById("formNote").classList.remove("hidden");
+        form.reset();
+      });
+
+      // Copy buttons
+      document.querySelectorAll(".copy-btn").forEach((b) => {
+        b.addEventListener("click", async () => {
+          const text = document
+            .getElementById(b.dataset.copy)
+            .textContent.trim();
+          try {
+            await navigator.clipboard.writeText(text);
+            b.classList.add("text-brand");
+            setTimeout(() => b.classList.remove("text-brand"), 1200);
+          } catch (err) {
+            console.error("Copy failed", err);
+          }
+        });
+      });
+    </script>
+    <script src="animations.js"></script>
+  </body>
+</html>

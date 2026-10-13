@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work — AH Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Anton", "Impact", "sans-serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+              hero: ["Poppins", "Inter", "sans-serif"],
+            },
+            colors: { brand: "#1a8cff", ink: "#161616" },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+            animation: { marquee: "marquee 25s linear infinite" },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Image placeholders: replace the gradient with a background-image / <img> */
+      .tile {
+        border-radius: 1.75rem;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      }
+      .hero-bg {
+        background:
+          radial-gradient(60% 40% at 20% 20%, #cfe3fb 0%, transparent 70%),
+          radial-gradient(50% 35% at 80% 60%, #c9defa 0%, transparent 70%),
+          radial-gradient(60% 40% at 30% 85%, #d3e5fc 0%, transparent 70%),
+          linear-gradient(#f4f8fe, #fff);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .animate-marquee {
+          animation: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="animations.css" />
+  </head>
+  <body class="bg-white font-sans text-ink antialiased">
+  <div class="relative">
+      <video
+        class="absolute inset-0 z-0 h-full w-full object-cover opacity-30"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="Assets/hero-poster.jpg"
+        aria-hidden="true"
+      >
+        <source src="Assets/video.mp4" type="video/mp4" />
+      </video>
+
+      <nav
+        class="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-6 md:px-10"
+      >
+        <a
+          href="index.html"
+          aria-label="AH Studio home"
+          class="font-display text-4xl leading-none"
+        >
+          <img src="Assets/Logo.png" alt="" class="w-[48px] h-auto" />
+        </a>
+        <button
+          id="menuBtn"
+          class="font-display text-2xl uppercase tracking-tight"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          Menu
+        </button>
+      </nav>
+
+      <div
+        id="menu"
+        class="fixed inset-0 z-40 hidden flex-col items-center justify-center gap-6 bg-ink text-white"
+      >
+        <button
+          id="menuClose"
+          class="absolute right-6 top-6 font-display text-2xl uppercase md:right-10"
+        >
+          Close
+        </button>
+        <a
+          href="work.html"
+          class="font-display text-8xl uppercase text-brand"
+          >Work</a
+        >
+        <a
+          href="about.html"
+          class="font-display text-8xl uppercase hover:text-brand"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          class="font-display text-8xl uppercase hover:text-brand"
+          >Contact</a
+        >
+      </div>
+
+      <!-- HERO -->
+      <header
+        class="relative flex min-h-[760px] items-center justify-center overflow-hidden px-6 py-32"
+      >
+       
+
+        <!-- bottom-left floating cards -->
+        <div
+          class="pointer-events-none absolute bottom-24 left-0 hidden h-72 w-96 md:block lg:left-10"
+          aria-hidden="true"
+        >
+          <div
+            class="tile float-card absolute left-0 top-6 h-44 w-36 -rotate-[22deg] bg-gradient-to-br from-pink-400 to-red-700"
+          >
+            <img
+              src="./Assets/bottom_header_1.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-16 top-10 h-44 w-36 -rotate-12 bg-gradient-to-br from-orange-500 to-orange-800"
+          >
+            <img
+              src="./Assets/bottom_header_2.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-32 top-14 h-44 w-36 -rotate-3 bg-gradient-to-br from-slate-300 to-slate-900"
+          >
+            <img
+              src="./Assets/bottom_header_3.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile float-card absolute left-48 top-12 h-44 w-36 rotate-6 bg-gradient-to-br from-green-600 to-red-500"
+          >
+            <img
+              src="./Assets/bottom_header_4.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-3xl text-center bottom-20">
+          <h1
+            class="font-display text-6xl uppercase leading-none sm:text-7xl md:text-9xl"
+          >
+            WORK
+          </h1>
+        
+        
+        </div>
+
+      
+      </header>
+    </div>
+
+    <!-- PROJECT LIST -->
+    <section class="mx-auto max-w-[1440px] px-6 pb-24 pt-24 md:px-10 md:pt-40">
+      <ul id="workList" class="relative">
+        <li data-active="true">
+          <a
+            href="#"
+            class="work-row group flex items-center justify-between rounded-3xl bg-black px-6 py-8 text-white transition-colors md:px-10 md:py-9"
+          >
+            <span
+              class="font-display text-5xl uppercase leading-none md:text-6xl"
+              >Hikoway</span
+            >
+            <svg
+              class="work-arrow h-9 w-9 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
+          </a>
+        </li>
+        <li class="border-b border-neutral-200">
+          <a
+            href="#"
+            class="work-row flex items-center justify-between rounded-3xl px-6 py-10 transition-colors md:px-10 md:py-11"
+          >
+            <span
+              class="font-display text-5xl uppercase leading-none md:text-6xl"
+              >Aicab</span
+            >
+            <svg
+              class="work-arrow hidden h-9 w-9 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
+          </a>
+        </li>
+        <li class="border-b border-neutral-200">
+          <a
+            href="#"
+            class="work-row flex items-center justify-between rounded-3xl px-6 py-10 transition-colors md:px-10 md:py-11"
+          >
+            <span
+              class="font-display text-5xl uppercase leading-none md:text-6xl"
+              >Global Immo</span
+            >
+            <svg
+              class="work-arrow hidden h-9 w-9 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
+          </a>
+        </li>
+        <li class="border-b border-neutral-200">
+          <a
+            href="#"
+            class="work-row flex items-center justify-between rounded-3xl px-6 py-10 transition-colors md:px-10 md:py-11"
+          >
+            <span
+              class="font-display text-5xl uppercase leading-none md:text-6xl"
+              >Marin Berth</span
+            >
+            <svg
+              class="work-arrow hidden h-9 w-9 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
+          </a>
+        </li>
+        <li class="border-b border-neutral-200">
+          <a
+            href="#"
+            class="work-row flex items-center justify-between rounded-3xl px-6 py-10 transition-colors md:px-10 md:py-11"
+          >
+            <span
+              class="font-display text-5xl uppercase leading-none md:text-6xl"
+              >Marin Berth</span
+            >
+            <svg
+              class="work-arrow hidden h-9 w-9 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+            </svg>
+          </a>
+        </li>
+
+        <!-- Floating preview: sits above the active row, tilted. Replace gradient with a project image. -->
+        <div
+          id="preview"
+          class="pointer-events-none absolute right-[14%] top-0 z-10 hidden h-72 w-72 -translate-y-[40%] rotate-[-12deg] overflow-hidden rounded-3xl bg-[#0f1117] shadow-2xl transition-all duration-300 md:block md:h-[26rem] md:w-80"
+          aria-hidden="true"
+        >
+          <div
+            class="absolute left-[12%] top-[38%] h-36 w-16 rotate-[4deg] rounded-xl border-2 border-neutral-600 bg-gradient-to-b from-white to-orange-100"
+          ></div>
+          <div
+            class="absolute left-[38%] top-[14%] h-36 w-16 rounded-xl border-2 border-neutral-600 bg-white"
+          ></div>
+          <div
+            class="absolute left-[62%] top-[12%] h-36 w-16 rounded-xl border-2 border-neutral-600 bg-gradient-to-b from-neutral-200 to-orange-200"
+          ></div>
+          <div
+            class="absolute left-[34%] top-[64%] h-32 w-16 rounded-xl border-2 border-neutral-600 bg-[#1a2030]"
+          ></div>
+          <div
+            class="absolute left-[72%] top-[54%] h-36 w-16 rounded-xl border-2 border-neutral-600 bg-white"
+          ></div>
+        </div>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="overflow-hidden bg-white pt-4">
+      <div
+        class="px-4 text-center font-display text-[24vw] uppercase leading-[1.05] text-brand md:text-[19.5vw]"
+        style="white-space: nowrap"
+      >
+        AH Studio
+      </div>
+
+      <div
+        class="relative mx-auto flex h-64 max-w-[1440px] items-center justify-center px-6"
+      >
+        <div
+          class="pointer-events-none absolute left-0 hidden h-60 w-[480px] md:block"
+          aria-hidden="true"
+        >
+          <div
+            class="tile absolute left-4 top-16 h-44 w-36 -rotate-[14deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer1.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-20 top-12 h-44 w-36 -rotate-[10deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer2.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-36 top-4 h-44 w-36 -rotate-6 overflow-hidden"
+          >
+            <img
+              src="Assets/footer3.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-60 top-0 h-44 w-36 rotate-3 overflow-hidden"
+          >
+            <img
+              src="Assets/footer4.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+
+        <a
+          href="contact.html"
+          class="relative z-10 rounded-full bg-ink px-10 py-4 font-display text-lg tracking-wide text-white transition hover:bg-brand"
+        >
+          Lets Talk
+        </a>
+
+        <div
+          class="pointer-events-none absolute right-0 hidden h-60 w-[480px] md:block"
+          aria-hidden="true"
+        >
+          <div class="tile absolute left-4 top-0 h-44 w-36 overflow-hidden">
+            <img
+              src="Assets/footer5.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-20 top-4 h-44 w-36 rotate-12 overflow-hidden"
+          >
+            <img
+              src="Assets/footer6.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-36 top-12 h-44 w-36 rotate-[22deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer7.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+          <div
+            class="tile absolute left-60 top-16 h-44 w-36 rotate-[22deg] overflow-hidden"
+          >
+            <img
+              src="Assets/footer8.jpg"
+              alt=""
+              class="h-full w-full object-cover rounded-[1.75rem]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden py-4" aria-label="Social links">
+        <div
+          class="flex w-max animate-marquee items-center gap-6 whitespace-nowrap font-display text-lg uppercase"
+        >
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Menu overlay
+      const menu = document.getElementById("menu");
+      const btn = document.getElementById("menuBtn");
+      const setMenu = (open) => {
+        menu.classList.toggle("hidden", !open);
+        menu.classList.toggle("flex", open);
+        btn.setAttribute("aria-expanded", open);
+      };
+      btn.addEventListener("click", () => setMenu(true));
+      document
+        .getElementById("menuClose")
+        .addEventListener("click", () => setMenu(false));
+      document.addEventListener(
+        "keydown",
+        (e) => e.key === "Escape" && setMenu(false),
+      );
+
+      // Project list: the hovered / focused row turns black, shows the arrow,
+      // and the tilted preview moves to sit on it.
+      const list = document.getElementById("workList");
+      const rows = [...list.querySelectorAll("li")];
+      const preview = document.getElementById("preview");
+      const on = ["bg-black", "text-white"];
+
+      function activate(li) {
+        rows.forEach((r) => {
+          const a = r.querySelector(".work-row");
+          const arrow = r.querySelector(".work-arrow");
+          const isOn = r === li;
+          a.classList.toggle("bg-black", isOn);
+          a.classList.toggle("text-white", isOn);
+          arrow.classList.toggle("hidden", !isOn);
+          r.classList.toggle("border-b", !isOn);
+          r.classList.toggle("border-neutral-200", !isOn);
+        });
+        preview.style.top = li.offsetTop + "px";
+      }
+      rows.forEach((li) => {
+        li.addEventListener("mouseenter", () => activate(li));
+        li.querySelector("a").addEventListener("focus", () => activate(li));
+      });
+      activate(rows[0]);
+      window.addEventListener("resize", () => {
+        const current = rows.find((r) =>
+          r.querySelector(".work-row").classList.contains("bg-black"),
+        );
+        if (current) activate(current);
+      });
+    </script>
+    <script src="animations.js"></script>
+  </body>
+</html>
