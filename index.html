@@ -51,7 +51,7 @@
         border-radius: 1.75rem;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
       }
-   
+
       /* Floating cards continuous motion */
       .float-card {
         --r: 0deg;
@@ -186,7 +186,7 @@
       >
         <!-- top-right floating cards -->
         <div
-          class="pointer-events-none absolute right-2 top-6 hidden h-72 w-96 md:block lg:right-16"
+          class="pointer-events-none absolute right-2 top-6 hidden h-72 w-96 md:block lg:right-4"
           aria-hidden="true"
         >
           <div
@@ -229,7 +229,7 @@
 
         <!-- bottom-left floating cards -->
         <div
-          class="pointer-events-none absolute bottom-24 left-0 hidden h-72 w-96 md:block lg:left-10"
+          class="pointer-events-none absolute bottom-24 left-0 hidden h-72 w-96 md:block lg:left-16"
           aria-hidden="true"
         >
           <div
@@ -314,7 +314,7 @@
 
     <!-- THE WAY WE THINK -->
     <section class="mx-auto max-w-[1440px] px-6 pt-16 md:px-10">
-      <div class="grid items-end gap-6 md:grid-cols-2">
+      <div class="flex flex-col md:flex-row justify-between">
         <h2 class="font-display text-6xl uppercase leading-none md:text-7xl">
           The way we think
         </h2>
@@ -366,7 +366,7 @@
 
     <!-- PROJECTS -->
     <section class="mx-auto max-w-[1440px] px-6 pt-32 md:px-10">
-      <div class="grid items-end gap-6 md:grid-cols-2">
+      <div class="flex flex-col md:flex-row justify-between">
         <h2 class="font-display text-6xl uppercase leading-none md:text-7xl">
           Projects
         </h2>
@@ -615,8 +615,10 @@
 
     <!-- WHY AH STUDIO -->
     <section class="mx-auto max-w-[1440px] px-6 pt-24 md:px-10">
-      <div class="grid items-center gap-6 md:grid-cols-2">
-        <h2 class="font-display text-6xl uppercase leading-none md:text-7xl">
+      <div class="flex flex-col md:flex-row justify-between">
+        <h2
+          class="font-display text-6xl uppercase leading-none md:text-7xl min-w-max"
+        >
           Why AH Studio?
         </h2>
         <p class="max-w-md text-lg text-neutral-700 md:ml-10">
@@ -703,7 +705,7 @@
     <!-- FOOTER -->
     <footer class="overflow-hidden bg-white pt-4">
       <div
-        class="px-4 text-center font-display text-[24vw] uppercase leading-[1.05] text-brand md:text-[19.5vw]"
+        class="px-4 text-center font-display text-[24vw] uppercase leading-[1.05] text-brand md:text-[25vw]"
         style="white-space: nowrap"
       >
         AH Studio
@@ -713,7 +715,7 @@
         class="relative mx-auto flex h-64 max-w-[1440px] items-center justify-center px-6"
       >
         <div
-          class="pointer-events-none absolute left-0 hidden h-60 w-[480px] md:block"
+          class="pointer-events-none absolute left-10 hidden h-60 w-[480px] md:block"
           aria-hidden="true"
         >
           <div
@@ -803,21 +805,61 @@
       </div>
 
       <div class="overflow-hidden py-4" aria-label="Social links">
-        <div
-          class="flex w-max animate-marquee items-center gap-6 whitespace-nowrap font-display text-lg uppercase"
-        >
-          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Instagram</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>Twitter</span><i class="h-2 w-2 rounded-full bg-brand"></i>
-          <span>X</span><i class="h-2 w-2 rounded-full bg-brand"></i>
+        <div class="overflow-hidden py-4" aria-label="Social links">
+          <div
+            class="flex w-max animate-marquee whitespace-nowrap font-display text-lg uppercase"
+          >
+            <!-- Half 1 -->
+            <div class="flex shrink-0 items-center gap-6 pr-6">
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+            </div>
+
+            <!-- Half 2: exact copy of half 1 -->
+            <div
+              class="flex shrink-0 items-center gap-6 pr-6"
+              aria-hidden="true"
+            >
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+              <span>LinkedIn</span><i class="h-2 w-2 rounded-full bg-brand"></i
+              ><span>Instagram</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>Twitter</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i><span>X</span
+              ><i class="h-2 w-2 rounded-full bg-brand"></i>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -866,10 +908,6 @@
       }
 
       // Auto-cycle like the video
-      setInterval(() => {
-        thinkIndex = (thinkIndex + 1) % thinkItems.length;
-        activateThink(thinkIndex);
-      }, 2800);
 
       // Also allow hover
       thinkItems.forEach((li, i) => {
@@ -880,29 +918,128 @@
       });
 
       // ===== PROCESS – sliding active bar on scroll (matches video) =====
-      const processSteps = [...document.querySelectorAll(".process-step")];
-      const processCards = document.querySelector(".process-cards");
+      // const processSteps = [...document.querySelectorAll(".process-step")];
+      // const processCards = document.querySelector(".process-cards");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const index = processSteps.indexOf(entry.target);
-              processSteps.forEach((s, i) =>
-                s.classList.toggle("active", i === index),
-              );
+      // const observer = new IntersectionObserver(
+      //   (entries) => {
+      //     entries.forEach((entry) => {
+      //       if (entry.isIntersecting) {
+      //         const index = processSteps.indexOf(entry.target);
+      //         processSteps.forEach((s, i) =>
+      //           s.classList.toggle("active", i === index),
+      //         );
 
-              // Move floating cards slightly with the active step
-              if (processCards) {
-                processCards.style.transform = `translateY(${index * 40}px)`;
-              }
-            }
+      //         // Move floating cards slightly with the active step
+      //         if (processCards) {
+      //           processCards.style.transform = `translateY(${index * 40}px)`;
+      //         }
+      //       }
+      //     });
+      //   },
+      //   { threshold: 0.55, rootMargin: "-20% 0px -35% 0px" },
+      // );
+
+      // processSteps.forEach((step) => observer.observe(step));
+      // ===== PROCESS – hover / scroll / click =====
+      // ===== PROCESS – hover / scroll / click =====
+      (() => {
+        const wrap = document.getElementById("processSteps");
+        if (!wrap) return;
+
+        const steps = [...wrap.querySelectorAll(".process-step")];
+        const cards = document.querySelector(".process-cards");
+        const cardImgs = cards ? [...cards.querySelectorAll("img")] : [];
+
+        steps.forEach((s) =>
+          (s.dataset.images || "").split(",").forEach((src) => {
+            if (src.trim()) new Image().src = src.trim();
+          }),
+        );
+
+        let current = Math.max(
+          0,
+          steps.findIndex((s) => s.classList.contains("active")),
+        );
+        let hovering = false;
+        let hoverTimer;
+        let followRaf;
+
+        // put the cards level with the middle of the active step
+        function moveCards() {
+          if (!cards) return;
+          const step = steps[current];
+          const parent = cards.offsetParent; // the `relative` wrapper
+          const center = step.offsetTop + step.offsetHeight / 2;
+          let y = center - cards.offsetHeight / 2 + 24; // +24 cancels the -top-6 offset
+          const max = parent.offsetHeight - cards.offsetHeight + 24;
+          y = Math.max(0, Math.min(y, max));
+          cards.style.transform = `translateY(${y}px)`;
+        }
+
+        // the active step grows while it animates, so keep following for ~0.6s
+        function follow() {
+          cancelAnimationFrame(followRaf);
+          const end = performance.now() + 600;
+          (function tick() {
+            moveCards();
+            if (performance.now() < end)
+              followRaf = requestAnimationFrame(tick);
+          })();
+        }
+
+        function setStep(i) {
+          if (i === current) return;
+          current = i;
+          steps.forEach((s, n) => s.classList.toggle("active", n === i));
+          follow();
+
+          const imgs = (steps[i].dataset.images || "")
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean);
+          cardImgs.forEach((img, n) => {
+            if (!imgs[n]) return;
+            img.classList.add("swapping");
+            setTimeout(
+              () => {
+                img.src = imgs[n];
+                img.classList.remove("swapping");
+              },
+              200 + n * 80,
+            );
           });
-        },
-        { threshold: 0.55, rootMargin: "-20% 0px -35% 0px" },
-      );
+        }
 
-      processSteps.forEach((step) => observer.observe(step));
+        steps.forEach((step, i) => {
+          step.addEventListener("mouseenter", () => {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => setStep(i), 90);
+          });
+          step.addEventListener("mouseleave", () => clearTimeout(hoverTimer));
+          step.addEventListener("click", () => setStep(i));
+        });
+
+        wrap.addEventListener("mouseenter", () => (hovering = true));
+        wrap.addEventListener("mouseleave", () => {
+          hovering = false;
+          clearTimeout(hoverTimer);
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (hovering) return;
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) setStep(steps.indexOf(entry.target));
+            });
+          },
+          { threshold: 0.55, rootMargin: "-20% 0px -35% 0px" },
+        );
+        steps.forEach((step) => observer.observe(step));
+
+        window.addEventListener("resize", moveCards);
+        moveCards();
+      })();
 
       // ===== Testimonials =====
       const quotes = [
